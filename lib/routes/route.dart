@@ -5,4 +5,5 @@ class AppRoutes {
   static const home = "/home";
   static const profile = "/profile";
   static const drawer = "/drawer";
+  static const favorit = "/favorit";
 }

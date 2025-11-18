@@ -67,6 +67,10 @@ class LoginPage extends StatelessWidget {
                 },
               ),
               const SizedBox(height: 16),
+              Container(
+                margin: EdgeInsets.only(bottom: 20),
+                child: Text("Or")
+              ),
               CustomButton(
                 text: "Register",
                 onPressed: () {

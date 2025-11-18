@@ -24,6 +24,11 @@ class CustomDrawer extends StatelessWidget {
             title: Text("Profile"),
             onTap: () => controller.navigateTo('/profile'),
           ),
+          ListTile(
+            leading: Icon(Icons.bookmark),
+            title: Text("Favorite"),
+            onTap: () => controller.navigateTo('/favorit'),
+          ),
         ],
       ),
     );

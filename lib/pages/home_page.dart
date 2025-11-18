@@ -36,9 +36,11 @@ class HomePage extends StatelessWidget {
             leading: Image(image: NetworkImage(store.image)),
             trailing: IconButton(
               onPressed: () {
-                
+                controller.addFavorite(store);
               }, 
-              icon: Icon(Icons.bookmark))
+              icon: Icon(Icons.bookmark),
+            )
+
            ));
           }),
           );

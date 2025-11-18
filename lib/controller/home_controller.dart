@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
+import 'package:pas/helpers/db_helper.dart';
 import 'package:pas/models/store_model.dart';
 
 class HomeController extends GetxController {
@@ -37,5 +38,16 @@ class HomeController extends GetxController {
     } finally {
       isLoading.value = false;
     }
+  }
+
+  Future<void> addFavorite(StoreModel item) async {
+    await DBHelper().insertFavorite({
+      "id": item.id,
+      "title": item.title,
+      "description": item.description,
+      "image": item.image,
+    });
+
+    Get.snackbar("Bookmark", "Berhasil ditambahkan ke Favorite");
   }
 }
